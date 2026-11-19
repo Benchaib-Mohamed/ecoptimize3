@@ -1,0 +1,14 @@
+network:
+  version: 2
+  ethernets:
+    ens160:
+      dhcp4: false
+      addresses:
+        - 10.10.20.40/24
+      routes:
+        - to: default
+          via: 10.10.20.1
+      nameservers:
+        addresses:
+          - 10.10.20.1
+          - 1.1.1.1

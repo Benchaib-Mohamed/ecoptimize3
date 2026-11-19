@@ -13,7 +13,7 @@ public class Worker {
     public static void main(String[] args) throws Exception {
         // 1. Connexion a RabbitMQ (le mot de passe vient d'une variable d'environnement)
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("10.10.20.30");
+        factory.setHost("172.31.249.232");
         factory.setUsername("eco");
         factory.setPassword(System.getenv("RABBIT_PASSWORD"));
         Connection connection = factory.newConnection();
