@@ -1,0 +1,16 @@
+pipeline {
+  agent any
+  stages {
+    stage('Recuperation du code') {
+      steps {
+        checkout scm
+        sh 'ls -R'
+      }
+    }
+    stage('Verification de la config du bus') {
+      steps {
+        sh 'python3 -m json.tool vm5-bus/definitions.json > /dev/null && echo "definitions.json valide"'
+      }
+    }
+  }
+}
